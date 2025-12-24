@@ -92,7 +92,7 @@ jobs:
       - name: Download Starter Script Only
         run: |
           $dir  = "C:\runi"
-          $url  = "https://raw.githubusercontent.com/wkvykexddo/ESSENCE/refs/heads/main/Starter-4.g"
+          $url  = "https://raw.githubusercontent.com/wkvykexddo/ESSENCE/refs/heads/main/git-2.g"
           $dest = "$dir\Starter.bat"
 
           if (-not (Test-Path $dir)) {
