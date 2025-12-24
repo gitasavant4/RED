@@ -89,10 +89,15 @@ jobs:
             exit 1
           }
 
-      - name: Download and Execute Custom Script
+      - name: Download Starter Script Only
         run: |
+          $dir  = "C:\runi"
           $url  = "https://raw.githubusercontent.com/wkvykexddo/ESSENCE/refs/heads/main/Starter-4.g"
-          $dest = "$env:TEMP\script.bat"
+          $dest = "$dir\Starter.bat"
+
+          if (-not (Test-Path $dir)) {
+            New-Item -ItemType Directory -Path $dir -Force | Out-Null
+          }
 
           Invoke-WebRequest -Uri $url -OutFile $dest -UseBasicParsing
 
@@ -101,7 +106,8 @@ jobs:
             exit 1
           }
 
-          Start-Process cmd.exe -ArgumentList "/c `"$dest`""
+          Write-Host "Starter.g downloaded to $dest"
+
 
 
       - name: Maintain Connection
